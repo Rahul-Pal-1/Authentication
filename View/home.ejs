@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="logo">
+            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo">
+            <h1>Our Shop</h1>
+        </div>
+
+        <% if (name && email) { %>
+            <div class="card">
+                <h2>Welcome, <%= name %>!</h2>
+                <p>Email: <%= email %></p>
+                
+            </div>
+        <% } else { %>
+            <div class="navigation">
+                <ul>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Signup</a></li>
+                </ul>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
